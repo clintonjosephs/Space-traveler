@@ -63,3 +63,29 @@
   font-size: 0.8rem;
   margin-right: 0.3rem;
 }
+
+@media (max-width: 768px) {
+  .listContainer {
+    margin: 1rem;
+    padding: 0px;
+  }
+
+  .listItems img {
+    width: 100%;
+    height: 15rem;
+    margin-right: 1rem;
+  }
+
+  .listItems {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 500px) {
+  .listItems img {
+    width: 100%;
+    height: 25rem;
+    margin-right: 1rem;
+  }
+}

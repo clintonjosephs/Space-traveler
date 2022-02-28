@@ -34,13 +34,13 @@
 }
 
 .listWrapper button {
-    width: 12rem;
-    height: 3rem;
-    box-shadow: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0.2rem;
+  width: 12rem;
+  height: 3rem;
+  box-shadow: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.2rem;
 }
 
 .reserve {
@@ -50,7 +50,16 @@
 }
 
 .cancel {
-    color: var(--neutral-color-2);
-    background: var(--white);
-    border: solid 3px var(--neutral-color);
+  color: var(--neutral-color-2);
+  background: var(--white);
+  border: solid 3px var(--neutral-color);
+}
+
+.badge {
+  background: var(--accent-color-2);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
 }

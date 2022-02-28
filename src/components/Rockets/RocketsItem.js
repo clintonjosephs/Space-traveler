@@ -14,7 +14,10 @@ const RocketsItem = (props) => {
       <img src={flickerImages} alt={rocketName} />
       <div className={styles.listWrapper}>
         <h1>{rocketName}</h1>
-        <div>{description}</div>
+        <div>
+          <span className={styles.badge}>Reserved</span>
+          {description}
+        </div>
         <button type="button" className={styles.reserve} onClick={clickHandler}>
           Reserve Rocket
         </button>

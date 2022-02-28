@@ -1,0 +1,29 @@
+.listContainer {
+  margin: 0.6rem 6.2rem;
+}
+
+.listItems img {
+  width: 250px;
+  height: 200px;
+  margin-right: 1rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.listItems {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px var(--neutral-color-2);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.listItems:hover {
+  transform: scale(1.05);
+}
+
+.listWrapper {
+  padding: 0.8rem;
+  line-height: 1.5rem;
+}

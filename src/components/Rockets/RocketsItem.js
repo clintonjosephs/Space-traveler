@@ -12,11 +12,13 @@ const RocketsItem = (props) => {
   return (
     <li className={styles.listItems}>
       <img src={flickerImages} alt={rocketName} />
-      <h2>{rocketName}</h2>
-      <div>{description}</div>
-      <button type="button" onClick={clickHandler}>
-        Reservation
-      </button>
+      <div className={styles.listWrapper}>
+        <h2>{rocketName}</h2>
+        <div>{description}</div>
+        <button type="button" onClick={clickHandler}>
+          Reservation
+        </button>
+      </div>
     </li>
   );
 };

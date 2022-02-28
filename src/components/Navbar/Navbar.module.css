@@ -24,8 +24,24 @@
   margin-right: 1.25rem;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: spin-logo infinite 20s linear;
+  }
+}
+
 .topic {
   flex: 3;
   display: flex;
   align-items: center;
+}
+
+@keyframes spin-logo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

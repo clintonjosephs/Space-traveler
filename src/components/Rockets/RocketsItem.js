@@ -7,7 +7,7 @@ const RocketsItem = (props) => {
     rocketId, rocketName, description, flickerImages,
   } = props;
   const clickHandler = () => {
-    console.log(rocketId);
+
   };
   return (
     <li className={styles.listItems}>
@@ -21,7 +21,7 @@ const RocketsItem = (props) => {
         <button type="button" className={styles.reserve} onClick={clickHandler}>
           Reserve Rocket
         </button>
-        <button type="button" className={styles.cancel} onClick={clickHandler}>
+        <button type="button" id={rocketId} className={styles.cancel} onClick={clickHandler}>
           Cancel Reservation
         </button>
       </div>

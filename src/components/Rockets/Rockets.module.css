@@ -67,7 +67,7 @@
 @media (max-width: 786px) {
   .listContainer {
     margin: 1rem;
-    padding: 0px;
+    padding: 0;
   }
 
   .listItems img {
@@ -81,5 +81,3 @@
     flex-direction: column;
   }
 }
-
-

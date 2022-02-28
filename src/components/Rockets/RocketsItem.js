@@ -15,8 +15,11 @@ const RocketsItem = (props) => {
       <div className={styles.listWrapper}>
         <h1>{rocketName}</h1>
         <div>{description}</div>
-        <button type="button" onClick={clickHandler}>
-          Reservation
+        <button type="button" className={styles.reserve} onClick={clickHandler}>
+          Reserve Rocket
+        </button>
+        <button type="button" className={styles.cancel} onClick={clickHandler}>
+          Cancel Reservation
         </button>
       </div>
     </li>

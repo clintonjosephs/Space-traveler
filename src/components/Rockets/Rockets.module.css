@@ -36,10 +36,21 @@
 .listWrapper button {
     width: 12rem;
     height: 3rem;
-    background: var(--accent-color);
-    border: none;
     box-shadow: none;
-    font-size: 1.3rem;
-    color: var(--white);
+    font-size: 1rem;
     border-radius: 5px;
+    cursor: pointer;
+    margin: 0.2rem;
+}
+
+.reserve {
+  background: var(--accent-color);
+  color: var(--white);
+  border: none;
+}
+
+.cancel {
+    color: var(--neutral-color-2);
+    background: var(--white);
+    border: solid 3px var(--neutral-color);
 }

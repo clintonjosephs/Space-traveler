@@ -13,7 +13,7 @@
 .listItems {
   display: flex;
   flex-direction: row;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   box-shadow: 0 0 10px var(--neutral-color-2);
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
@@ -31,4 +31,15 @@
 .listWrapper div {
   font-size: 1.2rem;
   padding: 1rem 0 1rem;
+}
+
+.listWrapper button {
+    width: 12rem;
+    height: 3rem;
+    background: var(--accent-color);
+    border: none;
+    box-shadow: none;
+    font-size: 1.3rem;
+    color: var(--white);
+    border-radius: 5px;
 }

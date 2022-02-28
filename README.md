@@ -2,7 +2,7 @@
 
 # Space Traveler
 
-![screenshot](./src/images/screenshots/bookstore.gif)
+![screenshot](./src/images/screenshot.png)
 
 > Placeholder for project description
 

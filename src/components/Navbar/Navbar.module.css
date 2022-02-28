@@ -1,0 +1,31 @@
+.container {
+  margin: 0.6rem 6.2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #cbcbcb;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.list li:nth-child(3) {
+  padding: 0 1rem;
+  border-right: 1px solid var(--black);
+  margin: 0 1rem;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.25rem;
+}
+
+.topic {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}

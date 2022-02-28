@@ -13,7 +13,7 @@ const RocketsItem = (props) => {
     <li className={styles.listItems}>
       <img src={flickerImages} alt={rocketName} />
       <div className={styles.listWrapper}>
-        <h2>{rocketName}</h2>
+        <h1>{rocketName}</h1>
         <div>{description}</div>
         <button type="button" onClick={clickHandler}>
           Reservation

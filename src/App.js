@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Missions from './components/Missions/Missions';
-import Navbar from './components/Pages/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Rockets from './components/Rockets/Rockets';
 

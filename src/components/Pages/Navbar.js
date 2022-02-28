@@ -28,7 +28,7 @@ const Navbar = () => (
             className="nav-link"
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none',
-              color: '#0079f9',
+              color: 'var(--accent-color)',
             })}
           >
             {text}

@@ -1,5 +1,21 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #fff;
+  --accent-color: #0079f9;
+  --accent-color-2: #00a1b6;
+  --neutral-color: #f2f2f2;
+  --neutral-color-2: #636c75;
+  --white: #fff;
+  --black: #000;
+  --red: #ff0000;
+}
+
+body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,

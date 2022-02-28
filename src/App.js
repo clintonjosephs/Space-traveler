@@ -1,3 +1,5 @@
-const App = () => <h2>Space Traveller</h2>;
+import Navbar from './components/Navbar';
+
+const App = () => <Navbar />;
 
 export default App;

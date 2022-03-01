@@ -52,7 +52,7 @@ const Missions = () => {
                   className={styles['mission-not-join']}
                   type="button"
                 >
-                  Join Mission
+                  {reserved ? 'Leave Mission' : 'Join Mission'}
                 </button>
               </td>
             </tr>

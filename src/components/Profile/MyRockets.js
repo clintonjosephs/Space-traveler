@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import { BsFillTrashFill } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
 import styles from './Profile.module.css';
+import { reserveRocket } from '../../redux/rockets/rockets';
 
 const MyRockets = ({ data }) => {
+  const dispatch = useDispatch();
   const removeRocketHandler = (id) => {
-    console.log(id);
+    dispatch(reserveRocket(id));
   };
   return (
     <ul className={styles['my-journeys']}>

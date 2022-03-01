@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import fetchMissions, {
-  joinMissionSuccesful,
+  toggleMissionSuccesful,
 } from '../../redux/missions/missions';
 import styles from './Missions.module.css';
 
@@ -19,7 +19,7 @@ const Missions = () => {
   }, []);
 
   const handleClick = (id) => {
-    dispatch(joinMissionSuccesful(id));
+    dispatch(toggleMissionSuccesful(id));
   };
 
   return (

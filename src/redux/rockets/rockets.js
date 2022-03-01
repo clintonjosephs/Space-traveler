@@ -22,10 +22,13 @@ const rocketReducer = (state = initialState, { type, payload }) => {
     case FETCH_ROCKETS:
       return { rockets: [...payload] };
     case TOOGLE_RESERVE:
-      return state.map((rocket) => {
-        if (rocket.id !== payload) return rocket;
-        return { ...rocket, reserved: !rocket.reserved };
-      });
+      return {
+        ...state,
+        rockets: state.rockets.map((rocket) => {
+          if (rocket.id !== payload) return rocket;
+          return { ...rocket, reserved: !rocket.reserved };
+        }),
+      };
     default:
       return state;
   }

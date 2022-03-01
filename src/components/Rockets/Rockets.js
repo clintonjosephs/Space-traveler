@@ -19,13 +19,14 @@ const Rockets = () => {
     <>
       <ul className={styles.listContainer}>
         {data.map(({
-          id, rocketName, description, flickrImages,
+          id, rocketName, description, flickrImages, reserved,
         }) => (
           <RocketsItem
             key={id}
             rocketName={rocketName}
             description={description}
             flickerImages={flickrImages}
+            reserved={reserved}
             id={id}
           />
         ))}

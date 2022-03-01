@@ -38,7 +38,7 @@ const RocketsItem = (props) => {
       <div className={styles.listWrapper}>
         <h1>{rocketName}</h1>
         <div>
-          <span className={styles.badge}>Reserved</span>
+          <span className={styles.badge} style={{ display: `${!reserved ? 'none' : 'inline'}` }}>Reserved</span>
           <span className={styles.describe}>{description}</span>
         </div>
         { reserveButtons }

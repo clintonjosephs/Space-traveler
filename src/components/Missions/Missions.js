@@ -49,14 +49,18 @@ const Missions = () => {
                 <button
                   id={missionId}
                   onClick={(e) => handleClick(e.target.id)}
-                  className={styles['mission-not-join']}
+                  className={
+                    reserved
+                      ? styles['mission-joined']
+                      : styles['mission-not-joined']
+                  }
                   type="button"
                 >
                   {reserved ? 'Leave Mission' : 'Join Mission'}
                 </button>
               </td>
             </tr>
-          )
+          ),
         )}
       </tbody>
     </table>

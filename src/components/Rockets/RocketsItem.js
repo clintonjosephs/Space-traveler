@@ -23,7 +23,7 @@ const RocketsItem = (props) => {
     : (
       <button
         type="button"
-        id={id}
+        onClick={() => handleRocketReserve(id)}
         className={styles.cancel}
       >
         Cancel Reservation

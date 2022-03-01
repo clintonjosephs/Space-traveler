@@ -1,6 +1,7 @@
 const FETCH_MISSIONS_REQUEST = 'FETCH_MISSIONS_REQUEST';
 const FETCH_MISSIONS_SUCCESSFUL = 'FETCH_MISSIONS_SUCCESSFUL';
 const FETCH_MISSIONS_FAILURE = 'FETCH_MISSIONS_FAILURE';
+const JOIN_MISSION_SUCCESSFUL = 'JOIN_MISSION_SUCCESSFUL';
 
 const fetchMissionsRequest = () => ({
   type: FETCH_MISSIONS_REQUEST,
@@ -14,6 +15,11 @@ const fetchMissionsSuccess = (missions) => ({
 const fetchMissionsFailure = (error) => ({
   type: FETCH_MISSIONS_FAILURE,
   payload: error,
+});
+
+export const joinMissionSuccesful = (id) => ({
+  type: JOIN_MISSION_SUCCESSFUL,
+  payload: id,
 });
 
 const initialMissionState = {
@@ -44,6 +50,17 @@ export const missionReducer = (state = initialMissionState, action) => {
         loading: false,
         missions: [],
         error: action.payload,
+      };
+
+    case JOIN_MISSION_SUCCESSFUL:
+      return {
+        ...state,
+        loading: false,
+        missions: state.missions.map((mission) => {
+          if (mission.mission_id !== action.payload) return mission;
+          return { ...mission, reserved: true };
+        }),
+        error: '',
       };
 
     default:

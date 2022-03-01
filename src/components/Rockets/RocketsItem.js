@@ -1,16 +1,35 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import styles from './Rockets.module.css';
+import { reserveRocket } from '../../redux/rockets/rockets';
 
 const RocketsItem = (props) => {
+  const dispatch = useDispatch();
+
   const {
-    id, rocketName, description, flickerImages,
+    id, rocketName, description, flickerImages, reserved,
   } = props;
-  const clickHandler = () => {
-    console.log(flickerImages);
+
+  const handleRocketReserve = (rocketId) => {
+    dispatch(reserveRocket(rocketId));
   };
+
+  const reserveButtons = !reserved ? (
+    <button type="button" className={styles.reserve} onClick={() => handleRocketReserve(id)}>
+      Reserve Rocket
+    </button>
+  )
+    : (
+      <button
+        type="button"
+        id={id}
+        className={styles.cancel}
+      >
+        Cancel Reservation
+      </button>
+    );
+
   return (
     <li className={styles.listItems}>
 
@@ -22,17 +41,7 @@ const RocketsItem = (props) => {
           <span className={styles.badge}>Reserved</span>
           <span className={styles.describe}>{description}</span>
         </div>
-        <button type="button" className={styles.reserve} onClick={clickHandler}>
-          Reserve Rocket
-        </button>
-        <button
-          type="button"
-          id={id}
-          className={styles.cancel}
-          onClick={clickHandler}
-        >
-          Cancel Reservation
-        </button>
+        { reserveButtons }
       </div>
     </li>
   );
@@ -43,6 +52,7 @@ RocketsItem.propTypes = {
   rocketName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   flickerImages: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default RocketsItem;

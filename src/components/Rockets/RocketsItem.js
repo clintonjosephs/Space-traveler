@@ -15,33 +15,34 @@ const RocketsItem = (props) => {
     dispatch(reserveRocket(rocketId));
   };
 
-  const reserveButtons = !reserved ? (
-    <button type="button" className={styles.reserve} onClick={() => handleRocketReserve(id)}>
-      Reserve Rocket
-    </button>
-  )
-    : (
-      <button
-        type="button"
-        onClick={() => handleRocketReserve(id)}
-        className={styles.cancel}
-      >
-        Cancel Reservation
-      </button>
-    );
-
   return (
     <li className={styles.listItems}>
-
-      <img src={flickerImages} alt={rocketName} className={styles.rocketImage} />
+      <img
+        src={flickerImages}
+        alt={rocketName}
+        className={styles.rocketImage}
+      />
 
       <div className={styles.listWrapper}>
         <h1>{rocketName}</h1>
         <div>
-          <span className={styles.badge} style={{ display: `${!reserved ? 'none' : 'inline'}` }}>Reserved</span>
+          <span
+            className={styles.badge}
+            style={{ display: `${!reserved ? 'none' : 'inline'}` }}
+          >
+            Reserved
+          </span>
           <span className={styles.describe}>{description}</span>
         </div>
-        { reserveButtons }
+        <button
+          onClick={() => handleRocketReserve(id)}
+          className={
+            !reserved ? styles.reserve : styles.cancel
+          }
+          type="button"
+        >
+          {!reserved ? 'Reserve Rocket' : 'Cancel Reservation'}
+        </button>
       </div>
     </li>
   );

@@ -1,7 +1,7 @@
 const FETCH_MISSIONS_REQUEST = 'FETCH_MISSIONS_REQUEST';
 const FETCH_MISSIONS_SUCCESSFUL = 'FETCH_MISSIONS_SUCCESSFUL';
 const FETCH_MISSIONS_FAILURE = 'FETCH_MISSIONS_FAILURE';
-const JOIN_MISSION_SUCCESSFUL = 'JOIN_MISSION_SUCCESSFUL';
+const TOGGLE_MISSION_SUCCESSFUL = 'TOGGLE_MISSION_SUCCESSFUL';
 
 const fetchMissionsRequest = () => ({
   type: FETCH_MISSIONS_REQUEST,
@@ -17,8 +17,8 @@ const fetchMissionsFailure = (error) => ({
   payload: error,
 });
 
-export const joinMissionSuccesful = (id) => ({
-  type: JOIN_MISSION_SUCCESSFUL,
+export const toggleMissionSuccesful = (id) => ({
+  type: TOGGLE_MISSION_SUCCESSFUL,
   payload: id,
 });
 
@@ -52,13 +52,15 @@ export const missionReducer = (state = initialMissionState, action) => {
         error: action.payload,
       };
 
-    case JOIN_MISSION_SUCCESSFUL:
+    case TOGGLE_MISSION_SUCCESSFUL:
       return {
         ...state,
         loading: false,
         missions: state.missions.map((mission) => {
-          if (mission.mission_id !== action.payload) return mission;
-          return { ...mission, reserved: true };
+          if (mission.mission_id === action.payload) {
+            return { ...mission, reserved: !mission.reserved };
+          }
+          return mission;
         }),
         error: '',
       };

@@ -16,7 +16,7 @@ const RocketsItem = (props) => {
         <h1>{rocketName}</h1>
         <div>
           <span className={styles.badge}>Reserved</span>
-          {description}
+          <span className={styles.describe}>{description}</span>
         </div>
         <button type="button" className={styles.reserve} onClick={clickHandler}>
           Reserve Rocket

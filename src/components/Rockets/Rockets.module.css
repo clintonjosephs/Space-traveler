@@ -64,6 +64,11 @@
   margin-right: 0.3rem;
 }
 
+.describe {
+  line-height: 2rem;
+  text-align: justify;
+}
+
 @media (max-width: 786px) {
   .listContainer {
     margin: 1rem;

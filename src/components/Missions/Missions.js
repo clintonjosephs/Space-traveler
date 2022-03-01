@@ -18,8 +18,8 @@ const Missions = () => {
     }
   }, []);
 
-  const handleClick = (target) => {
-    dispatch(toggleMissionSuccesful(target.id));
+  const handleClick = (id) => {
+    dispatch(toggleMissionSuccesful(id));
   };
 
   return (
@@ -48,7 +48,7 @@ const Missions = () => {
               <td>
                 <button
                   id={missionId}
-                  onClick={(e) => handleClick(e.target)}
+                  onClick={(e) => handleClick(e.target.id)}
                   className={
                     reserved
                       ? styles['mission-joined']

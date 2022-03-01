@@ -7,7 +7,8 @@
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 35vw;
+  cursor: pointer;
 }
 
 .my-journeys li {
@@ -29,4 +30,21 @@
   border-bottom: 1px solid #dce1e5;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
+}
+
+.setItems {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .my-journeys {
+    width: 95%;
+  }
 }

@@ -2,12 +2,10 @@
   margin: 0.6rem 6.2rem;
 }
 
-.listItems img {
-  width: 350px;
-  height: 300px;
-  margin-right: 1rem;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+.img {
+  margin-right: 1rem !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }
 
 .listItems {
@@ -75,10 +73,11 @@
     padding: 0;
   }
 
-  .listItems img {
-    width: 100%;
-    height: 22rem;
-    margin-right: 1rem;
+  .img {
+    height: 100%; 
+    overflow: auto;
+    width: 100% !important;
+    margin-right: 1rem !important;
   }
 
   .listItems {

@@ -11,9 +11,7 @@ const fetchRocketThunk = () => async (dispatch) => {
       rocketName: rocket.rocket_name,
       description: rocket.description,
       reserved: false,
-      flickrImages: rocket.flickr_images.map((image) => ({
-        url: image,
-      })),
+      flickrImages: rocket.flickr_images[Math.floor((Math.random() * rocket.flickr_images.length))],
     }));
 
     dispatch(fetchRockets(payload));

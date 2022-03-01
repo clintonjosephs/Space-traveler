@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import SimpleImageSlider from 'react-simple-image-slider';
 import styles from './Rockets.module.css';
 
 const RocketsItem = (props) => {
@@ -12,16 +13,9 @@ const RocketsItem = (props) => {
   };
   return (
     <li className={styles.listItems}>
-      <div className={styles.img}>
-        <SimpleImageSlider
-          width={300}
-          height={270}
-          images={flickerImages}
-          showBullets
-          showNavs
-          autoPlay
-        />
-      </div>
+
+      <img src={flickerImages} alt={rocketName} className={styles.rocketImage} />
+
       <div className={styles.listWrapper}>
         <h1>{rocketName}</h1>
         <div>
@@ -48,11 +42,7 @@ RocketsItem.propTypes = {
   id: PropTypes.number.isRequired,
   rocketName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  flickerImages: PropTypes.arrayOf(
-    PropTypes.shape({
-      url: PropTypes.string,
-    }),
-  ).isRequired,
+  flickerImages: PropTypes.string.isRequired,
 };
 
 export default RocketsItem;

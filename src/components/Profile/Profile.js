@@ -8,9 +8,13 @@ const Profile = () => {
     (state) => state.rocketReducer.rockets,
   ).filter((rocket) => rocket.reserved === true);
 
+  const missions = useSelector((state) => state.missionReducer.missions).filter(
+    ({ reserved }) => reserved === true,
+  );
+
   return (
     <div className={styles.container}>
-      <MyMissions />
+      <MyMissions missions={missions} />
       <MyRockets data={rocketState} />
     </div>
   );

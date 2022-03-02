@@ -15,14 +15,18 @@ const MyRockets = ({ data }) => {
         {' '}
         <h1>My Rockets</h1>
       </li>
-      {data.length === 0 ? <li>No rocket reservations yet</li> : data.map(({ id, rocketName }) => (
-        <li key={id}>
-          <div className={styles.setItems}>
-            <span>{rocketName}</span>
-            <BsFillTrashFill onClick={() => removeRocketHandler(id)} />
-          </div>
-        </li>
-      ))}
+      {data.length === 0 ? (
+        <li>No rocket reservations yet</li>
+      ) : (
+        data.map(({ id, rocketName }) => (
+          <li key={id}>
+            <div className={styles.setItems}>
+              <span>{rocketName}</span>
+              <BsFillTrashFill onClick={() => removeRocketHandler(id)} />
+            </div>
+          </li>
+        ))
+      )}
     </ul>
   );
 };

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check rocket snapshot matches snapshot 1`] = `
+<ul
+  className="listContainer"
+>
+  <li
+    className="listItems"
+    style={
+      Object {
+        "padding": "2rem",
+      }
+    }
+  >
+    <h1>
+      No rockets available
+    </h1>
+  </li>
+</ul>
+`;

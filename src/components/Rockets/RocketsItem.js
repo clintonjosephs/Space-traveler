@@ -27,6 +27,8 @@ const RocketsItem = (props) => {
         <h1>{rocketName}</h1>
         <div>
           <span
+            role="switch"
+            aria-checked
             className={styles.badge}
             style={{ display: `${!reserved ? 'none' : 'inline'}` }}
           >

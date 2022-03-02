@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import store from '../redux/ConfigureStore';
 import Rockets from '../components/Rockets/Rockets';

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check MyRockets matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <ul
+    className="my-journeys"
+  >
+    <li>
+       
+      <h1>
+        My Missions
+      </h1>
+    </li>
+    <li>
+      No Missions joined yet
+    </li>
+  </ul>
+  <ul
+    className="my-journeys"
+    data-testid="profileRockets"
+  >
+    <li>
+       
+      <h1>
+        My Rockets
+      </h1>
+    </li>
+    <li>
+      No rocket reservations yet
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Profile component Run tests on profile page functions persists the reservation made on the missions component 1`] = `
+<span>
+  Thaicom
+</span>
+`;
+
+exports[`Profile component Run tests on profile page functions persists the reservation made on the missions component 2`] = `
+<span>
+  Telstar
+</span>
+`;
+
+exports[`Profile component Run tests on profile page functions persists the reservation made on the missions component 3`] = `
+<span>
+  Iridium NEXT
+</span>
+`;
+
+exports[`Profile component Run tests on profile page functions removes the reserved missions when clicked 1`] = `
+<li>
+  No Missions joined yet
+</li>
+`;
+
+exports[`Profile component renders no missions joined 1`] = `
+<li>
+  No Missions joined yet
+</li>
+`;
+
+exports[`Profile component renders profile 1`] = `
+<h1>
+  My Missions
+</h1>
+`;
+
+exports[`Profile component renders profile 2`] = `
+<h1>
+  My Rockets
+</h1>
+`;

@@ -1,0 +1,98 @@
+.listContainer {
+  margin: 0.6rem 6.2rem;
+}
+
+.rocketImage {
+  width: 350px;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+  margin-right: 1rem !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+}
+
+.listItems {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px var(--neutral-color-2);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.listItems:hover {
+  transform: scale(1.05);
+}
+
+.listWrapper {
+  padding: 0.8rem;
+  line-height: 1.5rem;
+}
+
+.listWrapper div {
+  font-size: 1.2rem;
+  padding: 1rem 0 1rem;
+}
+
+.listWrapper button {
+  width: 12rem;
+  height: 3rem;
+  box-shadow: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.2rem;
+}
+
+.reserve {
+  background: var(--accent-color);
+  color: var(--white);
+  border: none;
+}
+
+.cancel {
+  color: var(--neutral-color-2);
+  background: var(--white);
+  border: solid 3px var(--neutral-color);
+}
+
+.badge {
+  background: var(--accent-color-2);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+
+.describe {
+  line-height: 2rem;
+  text-align: justify;
+}
+
+@media (max-width: 786px) {
+  .listContainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .img {
+    height: 100%;
+    overflow: auto;
+    width: 100% !important;
+    margin-right: 1rem !important;
+  }
+
+  .listItems {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rocketImage {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+}

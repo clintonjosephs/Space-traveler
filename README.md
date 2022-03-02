@@ -2,9 +2,11 @@
 
 # Space Traveler
 
-![screenshot](./src/images/screenshot.png)
+![screenshot](./src/images/presentation.gif)
 
-> Placeholder for project description
+[Project Demo](https://spacetraveller-spacex.netlify.app)
+
+>  Space Traveler's website was built with real live data from the SpaceX API. The application provides commercial and scientific space travel services that allow users book rockets and join selected space missions.
 
 
 Additional description about the project and its features.
@@ -15,8 +17,12 @@ Additional description about the project and its features.
 
 - Frameworks / Libraries
   ```bash
-  - React Library
-  - other libraries will go here
+  - React (Front end library)
+  - React Testing Library
+  - Jest(for testing)
+  - Git(version control)
+  - ESLint(JavaScript linting)
+  - Stylelint(style linting)
   ```
 
 - Technologies used 

@@ -10,7 +10,7 @@ const MyRockets = ({ data }) => {
     dispatch(reserveRocket(id));
   };
   return (
-    <ul className={styles['my-journeys']}>
+    <ul className={styles['my-journeys']} data-testid="profileRockets">
       <li>
         {' '}
         <h1>My Rockets</h1>
@@ -22,7 +22,7 @@ const MyRockets = ({ data }) => {
           <li key={id}>
             <div className={styles.setItems}>
               <span>{rocketName}</span>
-              <BsFillTrashFill onClick={() => removeRocketHandler(id)} />
+              <BsFillTrashFill onClick={() => removeRocketHandler(id)} role="img" />
             </div>
           </li>
         ))

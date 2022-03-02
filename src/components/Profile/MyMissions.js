@@ -34,7 +34,12 @@ const MyMissions = ({ missions }) => {
 };
 
 MyMissions.propTypes = {
-  missions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  missions: PropTypes.arrayOf(
+    PropTypes.shape({
+      missionName: PropTypes.string,
+      missionId: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default MyMissions;

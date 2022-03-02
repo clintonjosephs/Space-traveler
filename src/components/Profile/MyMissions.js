@@ -6,7 +6,6 @@ import styles from './Profile.module.css';
 
 const MyMissions = ({ missions }) => {
   const dispatch = useDispatch();
-
   const handleClick = (id) => {
     dispatch(toggleMissionSuccesful(id));
   };
@@ -24,7 +23,10 @@ const MyMissions = ({ missions }) => {
           <li key={missionId}>
             <div className={styles.setItems}>
               <span>{missionName}</span>
-              <BsFillTrashFill onClick={() => handleClick(missionId)} />
+              <BsFillTrashFill
+                onClick={() => handleClick(missionId)}
+                role="figure"
+              />
             </div>
           </li>
         ))

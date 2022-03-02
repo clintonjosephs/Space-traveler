@@ -33,3 +33,45 @@ exports[`Check MyRockets matches snapshot 1`] = `
   </ul>
 </div>
 `;
+
+exports[`Profile component Run tests on profile page functions persists the reservation made on the missions component 1`] = `
+<span>
+  Thaicom
+</span>
+`;
+
+exports[`Profile component Run tests on profile page functions persists the reservation made on the missions component 2`] = `
+<span>
+  Telstar
+</span>
+`;
+
+exports[`Profile component Run tests on profile page functions persists the reservation made on the missions component 3`] = `
+<span>
+  Iridium NEXT
+</span>
+`;
+
+exports[`Profile component Run tests on profile page functions removes the reserved missions when clicked 1`] = `
+<li>
+  No Missions joined yet
+</li>
+`;
+
+exports[`Profile component renders no missions joined 1`] = `
+<li>
+  No Missions joined yet
+</li>
+`;
+
+exports[`Profile component renders profile 1`] = `
+<h1>
+  My Missions
+</h1>
+`;
+
+exports[`Profile component renders profile 2`] = `
+<h1>
+  My Rockets
+</h1>
+`;

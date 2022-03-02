@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   width: 35vw;
-  cursor: pointer;
 }
 
 .my-journeys li {
@@ -35,6 +34,10 @@
 .setItems {
   display: flex;
   justify-content: space-between;
+}
+
+svg {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
